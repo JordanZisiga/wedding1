@@ -69,13 +69,15 @@
       }
 
       body {
-        background: var(--color-background);
         color: var(--color-text);
         font-family: var(--font-sans);
         line-height: 1.6;
-        background: url("kiss.gif") no-repeat center center fixed;
-        background-size: cover;
         margin: 0 auto;
+
+        background: url("kiss.gif") no-repeat center center;
+        background-size: 100% auto; /* fills width, keeps original height ratio */
+        background-attachment: fixed;
+        background-color: black; /* fallback if gif doesn't load */
       }
 
       body::before {
@@ -199,11 +201,10 @@
         transform: translateX(-1rem);
       }
 
-
       .illustration {
         text-align: center;
       }
-      
+
       @media screen and (min-width: 720px) {
         #name-jordan,
         #name-zisiga {
@@ -266,9 +267,8 @@
             <span id="name-zisiga">Zisiga</span>
           </div>
         </div>
-        <p class="tagline">
-          We're getting married! Join us to celebrate afterward.
-        </p>
+        <p class="tagline"> On August 15th, we're getting married! </p>
+        <p class="tagline"> Join us to celebrate afterward. </p>
       </section>
 
       <!-- Ceremony -->
@@ -280,10 +280,8 @@
         <h2 class="section-header">
           Come over to our home for food and drinks.
         </h2>
-        <p class="tagline">
-          If the front door is closed, text us. Otherwise, just come up and come
-          in! We’ll have enough food and drinks for all.
-        </p>
+        <p class="tagline">Just come up and come in! If the front door is closed, text us. </p>
+        <p class="tagline">We’ll have enough food and drinks for all.</p>
         <p>
           Address:
           <a
@@ -294,7 +292,6 @@
           >
         </p>
         <p>Time: 7:00 – 9:30 PM</p>
-        <p>Just come up and come in!</p>
       </section>
 
       <section class="ceremony">
@@ -303,9 +300,8 @@
         </div>
         <p class="part">PART II</p>
         <h2 class="section-header">We’ll head over to DADA Bar.</h2>
-        <p class="tagline">
-          If you’re coming late just join us there. Open bar, open late.
-        </p>
+        <p class="tagline">If you’re coming late, join us there.</p>
+        <p class="tagline">Open bar, open late.</p>
         <p>
           Address:
           <a href="https://maps.app.goo.gl/XPhVZ54B7uhY6hRt5" target="_blank"
