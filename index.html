@@ -72,12 +72,21 @@
         color: var(--color-text);
         font-family: var(--font-sans);
         line-height: 1.6;
-        margin: 0 auto;
-
-        background: url("kiss.gif") no-repeat center center;
-        background-size: 100% auto; /* fills width, keeps original height ratio */
+        margin: 0;
+        background-color: black;
+        position: relative;
+        overflow-x: hidden;
+      }
+      .background-gif {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -2;
+        background: black url("kiss.gif") center center no-repeat;
+        background-size: cover;
         background-attachment: fixed;
-        background-color: black; /* fallback if gif doesn't load */
       }
 
       body::before {
@@ -257,6 +266,7 @@
     </style>
   </head>
   <body>
+    <div class="background-gif"></div>
     <div class="container">
       <!-- Hero -->
       <section id="hero" class="hero">
@@ -267,8 +277,8 @@
             <span id="name-zisiga">Zisiga</span>
           </div>
         </div>
-        <p class="tagline"> On August 15th, we're getting married! </p>
-        <p class="tagline"> Join us to celebrate afterward. </p>
+        <p class="tagline">On August 15th, we're getting married!</p>
+        <p class="tagline">Join us to celebrate afterward.</p>
       </section>
 
       <!-- Ceremony -->
@@ -280,7 +290,9 @@
         <h2 class="section-header">
           Come over to our home for food and drinks.
         </h2>
-        <p class="tagline">Just come up and come in! If the front door is closed, text us. </p>
+        <p class="tagline">
+          Just come up and come in! If the front door is closed, text us.
+        </p>
         <p class="tagline">We’ll have enough food and drinks for all.</p>
         <p>
           Address:
