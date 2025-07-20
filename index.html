@@ -190,8 +190,28 @@
       }
 
       #name-jordan {
-        font-size: 7rem;
+        font-size: 5rem;
         display: block;
+      }
+
+      #name-zisiga {
+        font-size: 5rem;
+        transform: translateX(-1rem);
+      }
+
+
+      .illustration {
+        text-align: center;
+      }
+      
+      @media screen and (min-width: 720px) {
+        #name-jordan,
+        #name-zisiga {
+          font-size: 7rem;
+        }
+        .illustration {
+          text-align: left;
+        }
       }
 
       .name-line-2 {
@@ -204,11 +224,6 @@
         height: 6rem;
         margin-right: 1rem;
         transform: translateY(0.2rem);
-      }
-
-      #name-zisiga {
-        font-size: 7rem;
-        transform: translateX(-1rem);
       }
 
       .tagline {
@@ -229,10 +244,6 @@
       .fade-in.visible {
         opacity: 1;
         transform: translateY(0);
-      }
-
-      .illustration {
-        text-align: left;
       }
 
       .illustration img {
@@ -287,9 +298,9 @@
       </section>
 
       <section class="ceremony">
-      <div class="illustration">
-        <img src="dancing.png" alt="Dancing couple" />
-      </div>
+        <div class="illustration">
+          <img src="dancing.png" alt="Dancing couple" />
+        </div>
         <p class="part">PART II</p>
         <h2 class="section-header">We’ll head over to DADA Bar.</h2>
         <p class="tagline">
@@ -307,7 +318,7 @@
       <!-- RSVP -->
       <section id="rsvp" class="ceremony">
         <div class="illustration">
-        <img src="./letter.png" />
+          <img src="./letter.png" />
         </div>
         <p>
           Text <a href="tel:7604427777">760‑442‑7777</a> to let us know if you
