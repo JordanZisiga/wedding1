@@ -2,61 +2,62 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>We're getting married!</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <!-- styles -->
     <style>
       @font-face {
-        font-family: 'Metric', sans-serif;
+        font-family: "Metric", sans-serif;
         font-weight: 400;
         font-style: normal;
-        src: url("fonts/Metric-Regular.woff2") format('woff2');
+        src: url("fonts/Metric-Regular.woff2") format("woff2");
       }
 
       @font-face {
-        font-family: 'Metric', sans-serif;
+        font-family: "Metric", sans-serif;
         font-weight: 500;
         font-style: normal;
-        src: url("fonts/Metric-Medium.woff2") format('woff2');
+        src: url("fonts/Metric-Medium.woff2") format("woff2");
       }
 
       @font-face {
-        font-family: 'Signifier';
+        font-family: "Signifier";
         font-weight: 200;
         font-style: normal;
-        src: url("fonts/signifier-extralight.woff2") format('woff2');
+        src: url("fonts/signifier-extralight.woff2") format("woff2");
       }
 
       @font-face {
-        font-family: 'Signifier';
+        font-family: "Signifier";
         font-weight: 300;
         font-style: normal;
-        src: url("fonts/signifier-light.woff2") format('woff2');
+        src: url("fonts/signifier-light.woff2") format("woff2");
       }
 
       @font-face {
-        font-family: 'Signifier';
+        font-family: "Signifier";
         font-weight: 400;
         font-style: normal;
-        src: url("fonts/signifier-regular.woff2") format('woff2');
+        src: url("fonts/signifier-regular.woff2") format("woff2");
       }
 
       @font-face {
-        font-family: 'Signifier';
+        font-family: "Signifier";
         font-weight: 700;
         font-style: normal;
-        src: url("fonts/signifier-bold.woff2") format('woff2');
+        src: url("fonts/signifier-bold.woff2") format("woff2");
       }
 
       :root {
-        --color-bg: #C03131;
-        --color-secondary: #E27D60;
-        --color-neutral: #F8EDEB;
-        --color-accent: #6A0572;
+        --color-bg: #c03131;
+        --color-secondary: #e27d60;
+        --color-neutral: #f8edeb;
+        --color-accent: #6a0572;
         --color-text: rgb(255, 168, 168);
-        --font-sans: 'Signifier', 'Poppins', sans-serif;
+        --font-sans: "Signifier", "Poppins", sans-serif;
       }
 
       *,
@@ -78,7 +79,7 @@
       }
 
       body::before {
-        content: '';
+        content: "";
         position: fixed;
         top: 0;
         left: 0;
@@ -86,7 +87,6 @@
         bottom: 0;
         background: rgba(10, 10, 10, 0.6);
         animation: overlayFade 4s ease-in-out forwards;
-
       }
 
       @keyframes overlayFade {
@@ -96,7 +96,7 @@
       }
 
       h2 {
-        font-family: 'Metric', sans-serif;
+        font-family: "Metric", sans-serif;
         font-size: 1rem;
         font-weight: 700;
       }
@@ -141,7 +141,7 @@
       }
 
       .we-are-in-love {
-        font-family: 'Signifier', sans-serif;
+        font-family: "Signifier", sans-serif;
         font-weight: 500;
         font-size: 5rem;
         line-height: 1;
@@ -154,7 +154,7 @@
       }
 
       .section-header {
-        font-family: 'Signifier', sans-serif;
+        font-family: "Signifier", sans-serif;
         font-weight: 500;
         font-size: 3rem;
         text-wrap: balance;
@@ -170,7 +170,7 @@
       }
 
       .ceremony {
-        font-family: 'Metric', sans-serif;
+        font-family: "Metric", sans-serif;
         font-size: 1rem;
         font-weight: 500;
         padding-top: 5vh;
@@ -184,15 +184,35 @@
         margin-bottom: 0.5rem;
       }
 
-      .ampersand {
-        font-family: 'Signifier', sans-serif;
-        color: var(--color-text);
-        //  display: inline-block;
-        transform: translateY(-10%);
+      .name-stack {
+        display: inline-block;
+        text-align: left;
+      }
+
+      #name-jordan {
+        font-size: 7rem;
+        display: block;
+      }
+
+      .name-line-2 {
+        display: flex;
+        align-items: center;
+        margin-top: -1rem;
+      }
+
+      .ampersand-img {
+        height: 6rem;
+        margin-right: 1rem;
+        transform: translateY(0.2rem);
+      }
+
+      #name-zisiga {
+        font-size: 7rem;
+        transform: translateX(-1rem);
       }
 
       .tagline {
-        font-family: 'Signifier', sans-serif;
+        font-family: "Signifier", sans-serif;
         line-height: 1.2;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
@@ -210,68 +230,110 @@
         opacity: 1;
         transform: translateY(0);
       }
-    </style>
 
+      .illustration {
+        text-align: left;
+      }
+
+      .illustration img {
+        max-width: 300px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        filter: drop-shadow(0 0 1px white);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <!-- Hero -->
       <section id="hero" class="hero">
-
-        <h1 class="we-are-in-love">Jordan <br/>
-          <span class="ampersand">&amp;</span>
-       Zisiga</h1>
-        <p class="tagline">We're getting married! Join us to celebrate afterward.</p>
+        <div class="we-are-in-love name-stack">
+          <div id="name-jordan">Jordan</div>
+          <div class="name-line-2">
+            <img src="ampersand.png" alt="&" class="ampersand-img" />
+            <span id="name-zisiga">Zisiga</span>
+          </div>
+        </div>
+        <p class="tagline">
+          We're getting married! Join us to celebrate afterward.
+        </p>
       </section>
 
       <!-- Ceremony -->
       <section class="ceremony">
+        <div class="illustration">
+          <img src="drink.png" alt="Champagne" />
+        </div>
         <p class="part">PART I</p>
-        <h2 class="section-header">Come over to our home for food and drinks.</h2>
-        <p class="tagline">If the front door is closed, text us. Otherwise, just come up and come in! 
-            We’ll have enough food and drinks for all.
+        <h2 class="section-header">
+          Come over to our home for food and drinks.
+        </h2>
+        <p class="tagline">
+          If the front door is closed, text us. Otherwise, just come up and come
+          in! We’ll have enough food and drinks for all.
         </p>
-        <p>Address: <a href="https://maps.app.goo.gl/MkTotbXXbGwWm9xTA
-" target="_blank">1811 Cornelia Street, Apt 2L, Ridgewood, NY</a>
+        <p>
+          Address:
+          <a
+            href="https://maps.app.goo.gl/MkTotbXXbGwWm9xTA
+"
+            target="_blank"
+            >1811 Cornelia Street, Apt 2L, Ridgewood, NY</a
+          >
         </p>
         <p>Time: 7:00 – 9:30 PM</p>
         <p>Just come up and come in!</p>
       </section>
+
       <section class="ceremony">
+      <div class="illustration">
+        <img src="dancing.png" alt="Dancing couple" />
+      </div>
         <p class="part">PART II</p>
         <h2 class="section-header">We’ll head over to DADA Bar.</h2>
-        <p class="tagline">If you’re coming late just join us there. Open bar, open late.
+        <p class="tagline">
+          If you’re coming late just join us there. Open bar, open late.
         </p>
-        <p>Address: <a href="https://maps.app.goo.gl/XPhVZ54B7uhY6hRt5" target="_blank">60‑47 Myrtle Ave, Ridgewood, NY 11385</a>
+        <p>
+          Address:
+          <a href="https://maps.app.goo.gl/XPhVZ54B7uhY6hRt5" target="_blank"
+            >60‑47 Myrtle Ave, Ridgewood, NY 11385</a
+          >
         </p>
         <p>Time: 10:00 PM–late</p>
       </section>
 
       <!-- RSVP -->
       <section id="rsvp" class="ceremony">
-        <img src="/Users/zisiga/Documents/Admin/wedding-invite/letter.png">
-        <p>Text <a href="tel:7604427777">760‑442‑7777</a>  to let us know if you can make it. <br/>Please don’t bring anything, your presence is a present.</p>
+        <div class="illustration">
+        <img src="./letter.png" />
+        </div>
+        <p>
+          Text <a href="tel:7604427777">760‑442‑7777</a> to let us know if you
+          can make it. <br />Please don’t bring anything, your presence is a
+          present.
+        </p>
       </section>
     </div>
   </body>
   <!-- script.js: scroll-trigger & reveal -->
   <script>
-    document.documentElement.style.scrollBehavior = 'smooth';
-    window.addEventListener('DOMContentLoaded', () => {
-      const faders = document.querySelectorAll('.fade-in');
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e
-              .target
-              .classList
-              .add('visible');
-            obs.unobserve(e.target);
-          }
-        });
-      }, {threshold: 0.2});
-      faders.forEach(f => obs.observe(f));
+    document.documentElement.style.scrollBehavior = "smooth";
+    window.addEventListener("DOMContentLoaded", () => {
+      const faders = document.querySelectorAll(".fade-in");
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              obs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+      faders.forEach((f) => obs.observe(f));
     });
   </script>
-
 </html>
